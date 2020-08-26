@@ -1,0 +1,24 @@
+<h1>PrimeNg Bugs</h1>
+
+<form [formGroup]="form">
+  <h2>RadioButtons</h2>
+	<div class="p-field-radiobutton">
+		<p-radioButton name="groupname" value="ps4" formControlName="radioValue" label="PS4"></p-radioButton>
+	</div>
+	<div class="p-field-radiobutton">
+		<p-radioButton name="groupname" value="ps5" formControlName="radioValue" label="PS5"></p-radioButton>
+	</div>
+	<div class="p-field-radiobutton">
+		<p-radioButton name="groupname" value="xbox" formControlName="radioValue" label="Xbox"></p-radioButton>
+	</div>
+	<p>Selected value: {{ form.get('radioValue').value }}</p>
+
+	<h2>Slider</h2>
+	<p>Model Driven Forms Slider</p>
+	<p-slider formControlName="sliderFormsValue"></p-slider>
+  <p>Value: {{ form.get('sliderFormsValue').value }}</p>
+</form>
+
+<p>Two-way Binding Slider</p>
+<p-slider [(ngModel)]="sliderTwoWayValue"></p-slider>
+<p>Value: {{ sliderTwoWayValue }}</p>
